@@ -34,7 +34,7 @@ heading = 151.78
 #pitch = -0.76
 pitch = np.arange(-1,1,0.1)
 for i in range(1, 90,5):
-	for j in range(1,10):
+	for j in range(1,10,3):
 		url = 'https://maps.googleapis.com/maps/api/streetview?size=' + str(w)+'x'+str(h)+'&location='+str(lat)+','+str(lon)+'&heading='+str(i)+'&pitch='+str(pitch[j])+'&key='+api_key
 		sname = str(cl) + '/'+'image'+ '%05d'%(i*j) +'.jpg'
 		urllib.request.urlretrieve(url, sname)
